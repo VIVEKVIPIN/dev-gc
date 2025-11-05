@@ -1,0 +1,16 @@
+{
+  "name": "@alterahealth-touchworks/tw-problem-wc",
+  "version": "1.0.3",
+  "main": "tw-problem-wc.js",
+  "module": "tw-problem-wc.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "tw-problem-wc.js",
+    "index.html",
+    "polyfills.js",
+    "runtime.js",
+    "assets/"
+  ]
+}

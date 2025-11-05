@@ -1,0 +1,187 @@
+/* --- Modern CSS Styling --- */
+:root {
+    --blue-lightest: #eaf7fc;
+    --blue-light: #bfe0f5;
+    --blue-mid: #8ecae6;
+    --blue-dark: #219ebc;
+    --orange: #fb8500;
+    --grid-color: #e0e5ec;
+    --text-primary: #333;
+    --text-secondary: #555;
+    --bg-light: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+html, body, d3-chart {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    background: #fff;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#controls label {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#controls select {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+#chart-container {
+    flex: 1 1 auto;
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* --- D3 Chart Styles --- */
+.percentile-area.outer { fill: var(--blue-lightest); }
+.percentile-area.inner { fill: var(--blue-light); }
+
+.percentile-line {
+    fill: none;
+    stroke-width: 2px;
+}
+.percentile-line.median {
+    stroke: var(--blue-dark);
+    stroke-width: 2.5px;
+}
+
+.grid line {
+    stroke: var(--grid-color);
+}
+.grid .domain {
+    stroke: none;
+}
+.axis path, .axis line {
+    stroke: #aaa;
+}
+.axis text {
+    font-size: 12px;
+    fill: var(--text-secondary);
+}
+.axis-label {
+    font-size: 16px; /* Increased from 14px */
+    fill: var(--text-primary);
+    font-weight: 500;
+}
+
+.patient-path {
+    fill: none;
+    stroke: var(--orange);
+    stroke-width: 2px;
+}
+.patient-point {
+    fill: #fff;
+    stroke: var(--orange);
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: r 0.2s ease;
+}
+.patient-point:hover {
+    r: 8; /* Increased from 7 */
+}
+
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: opacity 0.2s;
+}
+.tooltip-date { font-weight: 600;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.tooltip-value { color: var(--orange); }
+.tooltip-percentile { 
+    color: var(--blue-light); 
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.percentile-label {
+    font-size: 12px; /* Increased from 11px */
+    fill: var(--text-secondary);
+    font-weight: 500;
+}
+
+#data-entry {
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+#data-entry h3 {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#measurement-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+#measurement-form label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#measurement-form select,
+#measurement-form input {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+#measurement-form button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--blue-dark);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#measurement-form button:hover {
+    background-color: #1a7f9c;
+}
