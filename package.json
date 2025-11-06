@@ -1,6 +1,6 @@
 {
-  "name": "dev-gc",
-  "version": "0.0.0",
+  "name": "@vivekvipin/dev-gc",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,6 @@
     "test": "ng test",
     "postbuild": "node rename-copy-files.js"
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
