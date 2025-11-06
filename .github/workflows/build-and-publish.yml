@@ -30,8 +30,11 @@ jobs:
         run: |
           echo "@VIVEKVIPIN:registry=https://npm.pkg.github.com/" > .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_SEC }}" >> .npmrc
+          echo "always-auth=true" >> .npmrc
 
       - name: Publish to GitHub Packages
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_SEC }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+           
