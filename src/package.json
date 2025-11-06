@@ -1,16 +1,16 @@
 {
-  "name": "@alterahealth-touchworks/tw-problem-wc",
-  "version": "1.0.3",
-  "main": "tw-problem-wc.js",
-  "module": "tw-problem-wc.js",
+  "name": "@VIVEKVIPIN/dev-gc",
+  "version": "0.0.1",
+  "main": "GChart.js",
+  "module": "GChart.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "files": [
-    "tw-problem-wc.js",
+    "GChart.js",
     "index.html",
     "polyfills.js",
     "runtime.js",
-    "assets/"
+    "styles.css"
   ]
 }
