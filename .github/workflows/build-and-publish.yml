@@ -29,9 +29,9 @@ jobs:
       - name: Create .npmrc file
         run: |
           echo "@VIVEKVIPIN:registry=https://npm.pkg.github.com/" > .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.DEV-TOK }}" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_SEC }}" >> .npmrc
 
       - name: Publish to GitHub Packages
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.DEV-TOK }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_SEC }}
