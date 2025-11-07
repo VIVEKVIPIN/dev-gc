@@ -1,6 +1,6 @@
 {
   "name": "@VIVEKVIPIN/dev-gc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "GChart.js",
   "module": "GChart.js",
   "publishConfig": {
