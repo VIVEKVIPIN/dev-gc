@@ -18,8 +18,8 @@ export class DataService {
           {
             headers: new HttpHeaders({
               'content-type': 'application/json',
-              Authorization: 'Bearer K8oB2Vck-Na6_D-8LWLNKFwFMesdwRtH_f8ohZ0-nDs',
-            //  Authorization: 'Bearer ' + this.AccessHelper.GetToken(false, false),
+            //  Authorization: 'Bearer K8oB2Vck-Na6_D-8LWLNKFwFMesdwRtH_f8ohZ0-nDs',
+             Authorization: 'Bearer ' + this.AccessHelper.GetToken(false, false),
             }),
           }
       )
@@ -45,8 +45,8 @@ export class DataService {
         {
           headers: new HttpHeaders({
             'content-type': 'application/json',
-            Authorization: 'Bearer K8oB2Vck-Na6_D-8LWLNKFwFMesdwRtH_f8ohZ0-nDs',
-          //  Authorization: 'Bearer ' + this.AccessHelper.GetToken(false, false),
+          //  Authorization: 'Bearer K8oB2Vck-Na6_D-8LWLNKFwFMesdwRtH_f8ohZ0-nDs',
+           Authorization: 'Bearer ' + this.AccessHelper.GetToken(false, false),
           }),
         }
         

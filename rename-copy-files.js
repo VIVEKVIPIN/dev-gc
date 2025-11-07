@@ -33,3 +33,18 @@ if (fs.existsSync(packageJsonSrc)) {
 } else {
   console.warn('package.json not found in src directory');
 }
+
+// Copy README.md from repo root to dist so published package has README data
+const readmeSrc = path.join(__dirname, 'README.md');
+const readmeDist = path.join(distPath, 'README.md');
+
+if (fs.existsSync(readmeSrc)) {
+  // Ensure dist directory exists before copying
+  if (!fs.existsSync(distPath)) {
+    fs.mkdirSync(distPath, { recursive: true });
+  }
+  fs.copyFileSync(readmeSrc, readmeDist);
+  console.log('Copied: README.md');
+} else {
+  console.warn('README.md not found at repository root');
+}
