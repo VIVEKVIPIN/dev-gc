@@ -90,7 +90,7 @@ export class D3ChartComponent implements OnInit, AfterViewInit, OnChanges {
   private ShellAPI = window.parent['ShellAPI'];
   private AccessHelper = window.parent['AccessHelper'];
 
-  @Input() chartType: string = '34';
+  @Input() chartType: string = '24';
 
   @Input() Patient: {} = {};
 
